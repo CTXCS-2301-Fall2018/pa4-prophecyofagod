@@ -1,11 +1,9 @@
 # PA4
 CSC2301 Programming Assignment 4
 
-1. Write an assembly program that takes two integer values, #startval# and #endval# where #startval <= endval#, and sums all the
-integers between those two values.  For example, if #startval# = 1, and #endval# = 5, the program would compute
-1 + 2 + 3 + 4 + 5, which is 10.  Some code is provided in `PA4-1.s` to get you started.  This code creates the two integers, #startval# and #endval#, loads startval into R1 and endval into R2.  
-Your program should use a loop to add up all the integers between those two numbers.  The final result should be in R0. You must use a
-loop to do this.  Hint:  Think about how you might write such a loop in C++ or Java, and convert that into ARM assembly.  
+1. Write an assembly program that takes two integer values, *startval* and *endval* where *startval <= endval*, and sums all the integers between those two values.  For example, if *startval* = 1, and *endval* = 5, the program would compute 1 + 2 + 3 + 4 + 5, which is 10.  Some code is provided in `PA4-1.s` to get you started.  This code creates the two integers, #startval# and #endval#, loads startval into R1 and endval into R2.   Your program should use a loop to add up all the integers between those two numbers.  The final result should be in R0. You must use a loop to do this.  Hint:  Think about how you might write such a loop in C++ or Java, and convert that into ARM assembly.  
+
+2. Write an assembly program that takes an integer, *n*, and computes *n!* (*n* factorial = *n * (n -1) * (n – 2) … * 2 * 1*) and puts that value into register R2.  You are given some starter code, `PA4-2.s`, that creates the integer *n*, and reads a value in using `scanf`.  Your code should use a loop to compute *n!*  Note that, *0!* = *1*, and *1!* = *1*.  Try different values of *n* to test your code!
 
 ## Grading Rubric
 
