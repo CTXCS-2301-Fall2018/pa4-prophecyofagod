@@ -1,5 +1,7 @@
 
-	@	Put the required header information here
+	@ Put the required header information here
+	@ Mario Saiz
+    @ 10/17/18
 
 	.extern printf
 	.extern scanf
@@ -17,15 +19,29 @@ main:
 	@ in R1.
 	@-------------
 
-	
-	
+
+    _counter:
+        MOV R1, #0 @Counter
+        MOV R5, #0 @Sum
+
+	_loop:
+        ADD R1, R1, #1 @Add 1 to R1 to go to the next register
+        ADD R5, R1, R5 @Add R5 and R1, and store in R1
+        CMP R1, R3 @Compare R1 with R3, so once it equals 5, it'll stop
+        BNE _loop @If not equal, branch ends
+        MOV R1, R5 @Move R5 into R1
+
+        @Does a counter to keep going into the registers and adding 1 each time
+        @At the end it adds 1+2+3+4+5 which will end up being 15
+
+
 	@-------------
 	@ Do NOT alter code past this line.
 	@-------------
 	LDR	R0, =out
 	BL	printf
 	POP	{PC}
-	
+
 .data
 startval:	.word 1
 endval:		.word 5
